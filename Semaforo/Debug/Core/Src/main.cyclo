@@ -1,0 +1,7 @@
+../Core/Src/main.c:96:5:main	1
+../Core/Src/main.c:151:6:SystemClock_Config	3
+../Core/Src/main.c:198:13:MX_GPIO_Init	1
+../Core/Src/main.c:339:6:VerificarBoton	5
+../Core/Src/main.c:360:6:MostrarContadorEnLEDs	1
+../Core/Src/main.c:388:6:loop_usuario	6
+../Core/Src/main.c:408:6:Error_Handler	1
