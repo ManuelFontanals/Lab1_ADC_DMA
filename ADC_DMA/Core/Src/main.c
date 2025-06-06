@@ -200,7 +200,7 @@ int main(void)
 
   inicio(); // Probamos los LED e Inicializamos
   HAL_GPIO_WritePin(potMedio_GPIO_Port, potMedio_Pin, GPIO_PIN_SET);
-
+  HAL_GPIO_WritePin(ntcMedio_GPIO_Port, ntcMedio_Pin, GPIO_PIN_SET);
 
   /* USER CODE END 2 */
 
@@ -643,7 +643,7 @@ HAL_GPIO_WritePin( potAlto_GPIO_Port, potAlto_Pin, GPIO_PIN_RESET);
 }
 
 // De Rojo a Amarillo
-else if ( (POT_SUP_INF < pot_avg) && HAL_GPIO_ReadPin(potAlto_GPIO_Port, potAlto_Pin)==1 ) {
+else if ( (POT_SUP_INF > pot_avg) && HAL_GPIO_ReadPin(potAlto_GPIO_Port, potAlto_Pin)==1 ) {
 HAL_GPIO_WritePin( potBajo_GPIO_Port, potBajo_Pin, GPIO_PIN_RESET);
 HAL_GPIO_WritePin(potMedio_GPIO_Port, potMedio_Pin, GPIO_PIN_SET);
 HAL_GPIO_WritePin( potAlto_GPIO_Port, potAlto_Pin, GPIO_PIN_RESET);
